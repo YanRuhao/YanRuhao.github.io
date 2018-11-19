@@ -1755,6 +1755,23 @@ pre .javascript .function {
   font-size: 13px;
   color: #999;
 }
+.site-author-image {
+  display: block;
+  margin: 0 auto;
+  padding: 2px;
+  max-width: 120px;
+  height: auto;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  transition: 1s all;
+}
+.site-author-image:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
 .site-state {
   overflow: hidden;
   line-height: 1.4;
@@ -1823,7 +1840,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6effe5;
+  background: #74f22d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3130,4 +3147,46 @@ body {
 .main-inner {
   background: #fff;
   opacity: 0.8;
+}
+.site-meta {
+  background-color: rgba(131,139,131,0.9);
+}
+.site-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 20px;
+}
+.site-subtitle {
+  margin: 0px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding-bottom: 3px;
+  color: #fff;
+}
+.post-button .btn {
+  color: #555 !important;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 15px;
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
+  border: none !important;
+  transition-property: unset;
+  padding: 0px 15px;
+}
+.post-button .btn:hover {
+  color: #fff !important;
+  border-radius: 3px;
+  font-size: 15px;
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
+  background-image: linear-gradient(90deg, #bebebe 0%, #789 25%, #708090 50%, #789 75%, #bebebe 100%);
+}
+.footer {
+  line-height: 1.5;
+  background-color: rgba(255,255,255,0.75);
+  color: #333;
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #838b83;
+  box-shadow: 0px -10px 10px 0px rgba(0,0,0,0.15);
 }
