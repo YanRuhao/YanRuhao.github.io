@@ -142,8 +142,6 @@
 
   <div class="container sidebar-position-left 
   page-home">
-    <div class="headband"></div>
-
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -157,7 +155,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">珂学是第一生产力</p>
       
   </div>
 
@@ -700,34 +698,17 @@
 
       
         
-          
-            <h3 id="Step-1-下载HMCL启动器"><a href="#Step-1-下载HMCL启动器" class="headerlink" title="Step 1.下载HMCL启动器"></a>Step 1.下载HMCL启动器</h3><p><a href="https://hmcl.huangyuhui.net/download" target="_blank" rel="noopener">这里</a>，当然是选择Linux版本的啦！</p>
-<h3 id="Step-2-卸载系统自带Java-openJDK"><a href="#Step-2-卸载系统自带Java-openJDK" class="headerlink" title="Step 2.卸载系统自带Java(openJDK)"></a>Step 2.卸载系统自带Java(openJDK)</h3><p>执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove openjdk*</span><br></pre></td></tr></table></figure></p>
-<h3 id="Step-3-下载Java-8-oracle-java8"><a href="#Step-3-下载Java-8-oracle-java8" class="headerlink" title="Step 3.下载Java 8(oracle-java8)"></a>Step 3.下载Java 8(oracle-java8)</h3><p><a href="https://java.com/zh_CN/download/linux_manual.jsp" target="_blank" rel="noopener">这里</a>，选择<code>Linux x64</code></p>
-<h3 id="Step-4-安装Java-8-oracle-java8"><a href="#Step-4-安装Java-8-oracle-java8" class="headerlink" title="Step 4.安装Java 8(oracle-java8)"></a>Step 4.安装Java 8(oracle-java8)</h3><p>接下来有点难度了。所有路径自己选，只不过要自己对应修改。<code>*</code>是你下载的java版本号。</p>
-<p><img src="https://cdn.luogu.org/upload/pic/43574.png" alt="版本号"></p>
-<p>在图中选择位置的下划线后面的数字。</p>
-<h4 id="1-解压缩并移动"><a href="#1-解压缩并移动" class="headerlink" title="1.解压缩并移动"></a>1.解压缩并移动</h4><p>解压缩文件夹到桌面，cd到桌面，输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv jre1.8.0_*/ /usr/local/</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h4><p>输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/environment</span><br></pre></td></tr></table></figure></p>
-<p>在末尾复制以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=&quot;/usr/local/jre1.8.0_*&quot;</span><br><span class="line">CLASSPATH=&quot;$JAVA_HOME/lib&quot;</span><br><span class="line">PATH＝&quot;$JAVA_HOME/bin&quot;</span><br></pre></td></tr></table></figure></p>
-<h4 id="3-安装jre环境"><a href="#3-安装jre环境" class="headerlink" title="3.安装jre环境"></a>3.安装jre环境</h4><p>输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install /usr/bin/java java /usr/local/jre1.8.0_*/bin/java 300</span><br></pre></td></tr></table></figure></p>
-<p>此时应该已经成功，输入命令检测<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure></p>
-<p>如果出现的是<code>java</code>而不是<code>openJDK</code>则说明安装成功！！跳过下一步。</p>
-<h4 id="4-选择正确jre"><a href="#4-选择正确jre" class="headerlink" title="4.选择正确jre"></a>4.选择正确jre</h4><p>输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --config java</span><br></pre></td></tr></table></figure></p>
-<p>按照提示选择你刚刚安装的Java。</p>
-<h3 id="Step-5-启动HMCL启动器"><a href="#Step-5-启动HMCL启动器" class="headerlink" title="Step 5.启动HMCL启动器"></a>Step 5.启动HMCL启动器</h3><p>cd到启动器目录，就是那个单文件，<strong>建议单独新建一个文件夹</strong>。<br>输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar</span><br></pre></td></tr></table></figure></p>
-<p>再来一个<code>tab</code>自动补全<del>(美滋滋)</del>，反正就是那个带HMCL的文件。</p>
-<p>然后。。。就没有然后了！！</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>1.Java有两种，一种<code>openjdk</code>，一种<code>oracle java</code>，直接无法使用的原因应该是系统自带的是<code>openjdk</code>这种并不太普及的Java。</p>
-<p>2.可以试试在不卸载自带Java的情况下安装Java 8，即跳过Step 2，也许就需要进行Step 4的第4部分。</p>
-<p>3.运行过程中请<strong>不要</strong>关闭终端，如果嫌弃终端，请尝试以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar HMCL-3.2.112.jar &amp;</span><br></pre></td></tr></table></figure></p>
-<p>也许你的文件名字不一样，请合理利用好<code>tab</code>自动补全。</p>
-<p>4.成果展示<br><img src="https://s1.ax1x.com/2018/11/15/iv1Q1J.png" alt="TNT"></p>
-
-          
+          <p>Minecraft作为一款高自由度沙盒游戏，想必很多人在Windows上面玩得很开心，由于辣鸡网易收购了Minecraft，导致国服只能通过网易，然而我们Linux上也不是不可以玩，下面带你开启<del>划水</del>之旅。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/11/mc/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
@@ -836,6 +817,28 @@
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                大佬的链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/qwerta/" title="伟大的hzz" target="_blank">伟大的hzz</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/Yldar/" title="智能手机" target="_blank">智能手机</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://heanda.github.io/" title="had奆佬" target="_blank">had奆佬</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
 
@@ -858,7 +861,7 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heartbeat"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">YRH</span>
 
@@ -866,20 +869,34 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 
