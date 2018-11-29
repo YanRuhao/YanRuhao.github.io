@@ -5,9 +5,9 @@
   <subtitle>珂学是第一生产力</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.yrh-blog.xyz/"/>
+  <link href="www.yrh-blog.xyz/"/>
   <updated>2018-11-28T13:45:58.413Z</updated>
-  <id>http://www.yrh-blog.xyz/</id>
+  <id>www.yrh-blog.xyz/</id>
   
   <author>
     <name>YRH</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>【题解】2008提高组——双栈队列</title>
-    <link href="http://www.yrh-blog.xyz/2018/11/27/%E5%8F%8C%E5%90%91%E5%AE%A2%E6%A0%88/"/>
-    <id>http://www.yrh-blog.xyz/2018/11/27/双向客栈/</id>
+    <link href="www.yrh-blog.xyz/2018/11/27/%E5%8F%8C%E5%90%91%E5%AE%A2%E6%A0%88/"/>
+    <id>www.yrh-blog.xyz/2018/11/27/双向客栈/</id>
     <published>2018-11-27T08:59:09.000Z</published>
     <updated>2018-11-28T13:45:58.413Z</updated>
     
@@ -31,21 +31,21 @@
     
     </summary>
     
-      <category term="编程" scheme="http://www.yrh-blog.xyz/categories/programming/"/>
+      <category term="编程" scheme="www.yrh-blog.xyz/categories/programming/"/>
     
     
-      <category term="2008" scheme="http://www.yrh-blog.xyz/tags/2008/"/>
+      <category term="2008" scheme="www.yrh-blog.xyz/tags/2008/"/>
     
-      <category term="提高组" scheme="http://www.yrh-blog.xyz/tags/%E6%8F%90%E9%AB%98%E7%BB%84/"/>
+      <category term="提高组" scheme="www.yrh-blog.xyz/tags/%E6%8F%90%E9%AB%98%E7%BB%84/"/>
     
-      <category term="二分图" scheme="http://www.yrh-blog.xyz/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/"/>
+      <category term="二分图" scheme="www.yrh-blog.xyz/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/"/>
     
   </entry>
   
   <entry>
     <title>NOIP2008题解报告</title>
-    <link href="http://www.yrh-blog.xyz/2018/11/17/NOIP2008%E9%A2%98%E8%A7%A3%E6%8A%A5%E5%91%8A/"/>
-    <id>http://www.yrh-blog.xyz/2018/11/17/NOIP2008题解报告/</id>
+    <link href="www.yrh-blog.xyz/2018/11/17/NOIP2008%E9%A2%98%E8%A7%A3%E6%8A%A5%E5%91%8A/"/>
+    <id>www.yrh-blog.xyz/2018/11/17/NOIP2008题解报告/</id>
     <published>2018-11-17T08:33:51.000Z</published>
     <updated>2018-11-20T08:13:30.113Z</updated>
     
@@ -60,17 +60,17 @@
     
     </summary>
     
-      <category term="编程" scheme="http://www.yrh-blog.xyz/categories/programming/"/>
+      <category term="编程" scheme="www.yrh-blog.xyz/categories/programming/"/>
     
     
-      <category term="历届真题" scheme="http://www.yrh-blog.xyz/tags/%E5%8E%86%E5%B1%8A%E7%9C%9F%E9%A2%98/"/>
+      <category term="历届真题" scheme="www.yrh-blog.xyz/tags/%E5%8E%86%E5%B1%8A%E7%9C%9F%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>NOIP2018提高组游记</title>
-    <link href="http://www.yrh-blog.xyz/2018/11/11/2018%E6%B8%B8%E8%AE%B0/"/>
-    <id>http://www.yrh-blog.xyz/2018/11/11/2018游记/</id>
+    <link href="www.yrh-blog.xyz/2018/11/11/2018%E6%B8%B8%E8%AE%B0/"/>
+    <id>www.yrh-blog.xyz/2018/11/11/2018游记/</id>
     <published>2018-11-11T12:00:27.000Z</published>
     <updated>2018-11-19T13:25:21.301Z</updated>
     
@@ -85,19 +85,19 @@
     
     </summary>
     
-      <category term="生活" scheme="http://www.yrh-blog.xyz/categories/life/"/>
+      <category term="生活" scheme="www.yrh-blog.xyz/categories/life/"/>
     
     
   </entry>
   
   <entry>
     <title>在Linux上玩Minecraft</title>
-    <link href="http://www.yrh-blog.xyz/2018/11/11/mc/"/>
-    <id>http://www.yrh-blog.xyz/2018/11/11/mc/</id>
+    <link href="www.yrh-blog.xyz/2018/11/11/mc/"/>
+    <id>www.yrh-blog.xyz/2018/11/11/mc/</id>
     <published>2018-11-11T12:00:27.000Z</published>
     <updated>2018-11-19T13:24:45.705Z</updated>
     
-    <content type="html"><![CDATA[<p>Minecraft作为一款高自由度沙盒游戏，想必很多人在Windows上面玩得很开心，由于辣鸡网易收购了Minecraft，导致国服只能通过网易，然而我们Linux上也不是不可以玩，下面带你开启<del>划水</del>之旅。<br><a id="more"></a></p><h3 id="Step-1-下载HMCL启动器"><a href="#Step-1-下载HMCL启动器" class="headerlink" title="Step 1.下载HMCL启动器"></a>Step 1.下载HMCL启动器</h3><p><a href="https://hmcl.huangyuhui.net/download" target="_blank" rel="noopener">这里</a>，当然是选择Linux版本的啦！</p><h3 id="Step-2-卸载系统自带Java-openJDK"><a href="#Step-2-卸载系统自带Java-openJDK" class="headerlink" title="Step 2.卸载系统自带Java(openJDK)"></a>Step 2.卸载系统自带Java(openJDK)</h3><p>执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove openjdk*</span><br></pre></td></tr></table></figure></p><h3 id="Step-3-下载Java-8-oracle-java8"><a href="#Step-3-下载Java-8-oracle-java8" class="headerlink" title="Step 3.下载Java 8(oracle-java8)"></a>Step 3.下载Java 8(oracle-java8)</h3><p><a href="https://java.com/zh_CN/download/linux_manual.jsp" target="_blank" rel="noopener">这里</a>，选择<code>Linux x64</code></p><h3 id="Step-4-安装Java-8-oracle-java8"><a href="#Step-4-安装Java-8-oracle-java8" class="headerlink" title="Step 4.安装Java 8(oracle-java8)"></a>Step 4.安装Java 8(oracle-java8)</h3><p>接下来有点难度了。所有路径自己选，只不过要自己对应修改。<code>*</code>是你下载的java版本号。</p><p><img src="https://cdn.luogu.org/upload/pic/43574.png" alt="版本号"></p><p>在图中选择位置的下划线后面的数字。</p><h4 id="1-解压缩并移动"><a href="#1-解压缩并移动" class="headerlink" title="1.解压缩并移动"></a>1.解压缩并移动</h4><p>解压缩文件夹到桌面，cd到桌面，输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv jre1.8.0_*/ /usr/local/</span><br></pre></td></tr></table></figure></p><h4 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h4><p>输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/environment</span><br></pre></td></tr></table></figure></p><p>在末尾复制以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=&quot;/usr/local/jre1.8.0_*&quot;</span><br><span class="line">CLASSPATH=&quot;$JAVA_HOME/lib&quot;</span><br><span class="line">PATH＝&quot;$JAVA_HOME/bin&quot;</span><br></pre></td></tr></table></figure></p><h4 id="3-安装jre环境"><a href="#3-安装jre环境" class="headerlink" title="3.安装jre环境"></a>3.安装jre环境</h4><p>输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install /usr/bin/java java /usr/local/jre1.8.0_*/bin/java 300</span><br></pre></td></tr></table></figure></p><p>此时应该已经成功，输入命令检测<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure></p><p>如果出现的是<code>java</code>而不是<code>openJDK</code>则说明安装成功！！跳过下一步。</p><h4 id="4-选择正确jre"><a href="#4-选择正确jre" class="headerlink" title="4.选择正确jre"></a>4.选择正确jre</h4><p>输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --config java</span><br></pre></td></tr></table></figure></p><p>按照提示选择你刚刚安装的Java。</p><h3 id="Step-5-启动HMCL启动器"><a href="#Step-5-启动HMCL启动器" class="headerlink" title="Step 5.启动HMCL启动器"></a>Step 5.启动HMCL启动器</h3><p>cd到启动器目录，就是那个单文件，<strong>建议单独新建一个文件夹</strong>。<br>输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar</span><br></pre></td></tr></table></figure></p><p>再来一个<code>tab</code>自动补全<del>(美滋滋)</del>，反正就是那个带HMCL的文件。</p><p>然后。。。就没有然后了！！</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>1.Java有两种，一种<code>openjdk</code>，一种<code>oracle java</code>，直接无法使用的原因应该是系统自带的是<code>openjdk</code>这种并不太普及的Java。</p><p>2.可以试试在不卸载自带Java的情况下安装Java 8，即跳过Step 2，也许就需要进行Step 4的第4部分。</p><p>3.运行过程中请<strong>不要</strong>关闭终端，如果嫌弃终端，请尝试以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar HMCL-3.2.112.jar &amp;</span><br></pre></td></tr></table></figure></p><p>也许你的文件名字不一样，请合理利用好<code>tab</code>自动补全。</p><p>4.成果展示<br><img src="https://s1.ax1x.com/2018/11/15/iv1Q1J.png" alt="TNT"></p>]]></content>
+    <content type="html"><![CDATA[<p>Minecraft作为一款高自由度沙盒游戏，想必很多人在Windows上面玩得很开心，由于辣鸡网易收购了Minecraft，导致国服只能通过网易，然而我们Linux上也不是不可以玩，下面带你开启<del>划水</del>之旅。<br><a id="more"></a></p><h3 id="Step-1-下载HMCL启动器"><a href="#Step-1-下载HMCL启动器" class="headerlink" title="Step 1.下载HMCL启动器"></a>Step 1.下载HMCL启动器</h3><p><a href="https://hmcl.huangyuhui.net/download" target="_blank" rel="noopener">这里</a>，当然是选择Linux版本的啦！</p><h3 id="Step-2-卸载系统自带Java-openJDK"><a href="#Step-2-卸载系统自带Java-openJDK" class="headerlink" title="Step 2.卸载系统自带Java(openJDK)"></a>Step 2.卸载系统自带Java(openJDK)</h3><p>执行命令<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> <span class="builtin-name">remove</span> openjdk*</span><br></pre></td></tr></table></figure></p><h3 id="Step-3-下载Java-8-oracle-java8"><a href="#Step-3-下载Java-8-oracle-java8" class="headerlink" title="Step 3.下载Java 8(oracle-java8)"></a>Step 3.下载Java 8(oracle-java8)</h3><p><a href="https://java.com/zh_CN/download/linux_manual.jsp" target="_blank" rel="noopener">这里</a>，选择<code>Linux x64</code></p><h3 id="Step-4-安装Java-8-oracle-java8"><a href="#Step-4-安装Java-8-oracle-java8" class="headerlink" title="Step 4.安装Java 8(oracle-java8)"></a>Step 4.安装Java 8(oracle-java8)</h3><p>接下来有点难度了。所有路径自己选，只不过要自己对应修改。<code>*</code>是你下载的java版本号。</p><p><img src="https://cdn.luogu.org/upload/pic/43574.png" alt="版本号"></p><p>在图中选择位置的下划线后面的数字。</p><h4 id="1-解压缩并移动"><a href="#1-解压缩并移动" class="headerlink" title="1.解压缩并移动"></a>1.解压缩并移动</h4><p>解压缩文件夹到桌面，cd到桌面，输入命令<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv jre1.<span class="number">8.0</span>_*<span class="regexp">/ /u</span>sr<span class="regexp">/local/</span></span><br></pre></td></tr></table></figure></p><h4 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h4><p>输入命令<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit <span class="regexp">/etc/</span>environment</span><br></pre></td></tr></table></figure></p><p>在末尾复制以下内容<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=<span class="string">"/usr/local/jre1.8.0_*"</span></span><br><span class="line">CLASSPATH=<span class="string">"$JAVA_HOME/lib"</span></span><br><span class="line">PATH＝<span class="string">"$JAVA_HOME/bin"</span></span><br></pre></td></tr></table></figure></p><h4 id="3-安装jre环境"><a href="#3-安装jre环境" class="headerlink" title="3.安装jre环境"></a>3.安装jre环境</h4><p>输入命令<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install <span class="regexp">/usr/</span>bin<span class="regexp">/java java /u</span>sr<span class="regexp">/local/</span>jre1.<span class="number">8.0</span>_*<span class="regexp">/bin/</span>java <span class="number">300</span></span><br></pre></td></tr></table></figure></p><p>此时应该已经成功，输入命令检测<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -<span class="built_in">version</span></span><br></pre></td></tr></table></figure></p><p>如果出现的是<code>java</code>而不是<code>openJDK</code>则说明安装成功！！跳过下一步。</p><h4 id="4-选择正确jre"><a href="#4-选择正确jre" class="headerlink" title="4.选择正确jre"></a>4.选择正确jre</h4><p>输入命令<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">update</span>-alternatives <span class="comment">--config java</span></span><br></pre></td></tr></table></figure></p><p>按照提示选择你刚刚安装的Java。</p><h3 id="Step-5-启动HMCL启动器"><a href="#Step-5-启动HMCL启动器" class="headerlink" title="Step 5.启动HMCL启动器"></a>Step 5.启动HMCL启动器</h3><p>cd到启动器目录，就是那个单文件，<strong>建议单独新建一个文件夹</strong>。<br>输入命令<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">java -jar</span></span><br></pre></td></tr></table></figure></p><p>再来一个<code>tab</code>自动补全<del>(美滋滋)</del>，反正就是那个带HMCL的文件。</p><p>然后。。。就没有然后了！！</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>1.Java有两种，一种<code>openjdk</code>，一种<code>oracle java</code>，直接无法使用的原因应该是系统自带的是<code>openjdk</code>这种并不太普及的Java。</p><p>2.可以试试在不卸载自带Java的情况下安装Java 8，即跳过Step 2，也许就需要进行Step 4的第4部分。</p><p>3.运行过程中请<strong>不要</strong>关闭终端，如果嫌弃终端，请尝试以下命令<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">nohup</span> <span class="selector-tag">java</span> <span class="selector-tag">-jar</span> <span class="selector-tag">HMCL-3</span><span class="selector-class">.2</span><span class="selector-class">.112</span><span class="selector-class">.jar</span> &amp;</span><br></pre></td></tr></table></figure></p><p>也许你的文件名字不一样，请合理利用好<code>tab</code>自动补全。</p><p>4.成果展示<br><img src="https://s1.ax1x.com/2018/11/15/iv1Q1J.png" alt="TNT"></p>]]></content>
     
     <summary type="html">
     
@@ -105,10 +105,10 @@
     
     </summary>
     
-      <category term="其他" scheme="http://www.yrh-blog.xyz/categories/other/"/>
+      <category term="其他" scheme="www.yrh-blog.xyz/categories/other/"/>
     
     
-      <category term="不务正业" scheme="http://www.yrh-blog.xyz/tags/%E4%B8%8D%E5%8A%A1%E6%AD%A3%E4%B8%9A/"/>
+      <category term="不务正业" scheme="www.yrh-blog.xyz/tags/%E4%B8%8D%E5%8A%A1%E6%AD%A3%E4%B8%9A/"/>
     
   </entry>
   

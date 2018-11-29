@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[【题解】2008提高组——双栈队列]]></title>
+    <url>%2F2018%2F11%2F27%2F%E5%8F%8C%E5%90%91%E5%AE%A2%E6%A0%88%2F</url>
+    <content type="text"><![CDATA[典型二分图染色的基本操作，此题对学习二分图有很大的帮助，同时因为很多题解对此介绍不太详细，而且有些模拟算法有误，故写此篇，介绍一下二分图及其操作。 什么是二分图 二分图又称作二部图，是图论中的一种特殊模型。设G=(V,E)是一个无向图，如果顶点V可分割为两个互不相交的子集(A,B)，并且图中的每条边（i，j）所关联的两个顶点i和j分别属于这两个不同的顶点集(i in A,j in B)，则称图G为一个二分图。 G=(V, E)，其中G代表图，V代表这个图的所有顶点的集合，E代表这个图所有连线的集合。现如今如果能将V这个顶点集分成两个互不相交的子集A、B，E这个边集内所有边的两个顶点分别属于A、B两个子集的话，我们就称这个图为二分图。结合下图，相信可以对二分图有一个初步的了解。 什么是染色就是给对象标记一种“颜色”，其主要作用是便于分类，而不是实现真正意义上的染色。故我们可以创建一个数组，每个数组的下标对应一个元素，数组的每个元素的值代表该对象标记的颜色。如此，就完成了染色这一步骤。我们可以通过建立二维数组e[MAX][MAX]来实现二分图。二维数组的横向代表A顶点子集，纵向代表B顶点子集。如若两个顶点i,j有连接，则在对应的e[i][j] 与 e[j][i]处赋值为1。我们可以通过dfs进行染色验证，判断其是否为二分图。 二分图的条件：通过深度优先搜索对每个顶点进行染色，如果相邻顶点颜色相同或者是同一顶点出现染不同颜色的情况，则说明该图不是二分图。 题目解析此题题意还是很明确的，通过两个栈来进行排序操作，并且找出最小值。方法便是二分图染色。对数字串进行两个两个逐次遍历，如果符合规则的便将二者连接起来，则当遍历结束后完成构图。然后通过dfs染色，确立真正的二分图。然后借助染色表(记录每个元素颜色的数组)，进行相应的push(), pop()操作，最终便能完成排序。具体规则如下： 对于任意两个数t[i]和t[j],它们不能压入同一个栈中的充要条件: 存在一个k,使得i&lt;j&lt;k且t[k]&lt;t[i]&lt;t[j]。 证明 ：利用反证法，假设当这t[i]，t[j]压入了同一个栈，那么压入t[k]，因为t[k]&lt;t[i]&lt;t[j]，显然，当t[k]没有被弹出的时候，另两个数也都不能被弹出，否则不符题意。而又因t[j]总是会在t[i]之前弹出，但t[j]&gt;t[i]，矛盾，所以假设不成立。由此，我们便可根据这些来解决此题了。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889#include&lt;cstdio&gt;#include&lt;cstdlib&gt;#include&lt;iostream&gt;#include&lt;algorithm&gt;#include&lt;stack&gt;#include&lt;cmath&gt;#define maxn 1004using namespace std;const int inf=19260817;int n,num;int color[maxn];int t[maxn]; //要排序的元素的存储int s[maxn]; //判断两个数字是否满足规则bool flag,e[maxn][maxn];void paint(int x,int c)&#123; //DFS进行染色 color[x]=c; for(int i=1;i&lt;=n;i++)&#123; if(e[x][i])&#123; //查找相邻点 if(color[i]==c) flag=false; //若相邻点颜色相同，则错误 if(!color[i]) paint(i,3-c); //若未染过色，对其染色，3-c结果为1,2，表示1与2号栈 &#125; &#125;&#125;void make()&#123; //创造二分图 s[n+1]=inf; for(int i=n;i&gt;=1;i--)&#123; s[i]=t[i]; if(s[i+1]&lt;s[i]) s[i]=s[i+1]; &#125; for(int i=1;i&lt;n;i++)&#123; for(int j=i+1;j&lt;n;j++)&#123; if(t[i]&lt;t[j] &amp;&amp; s[j+1]&lt;t[i])&#123; e[i][j]=e[j][i]=1; //按规则创建图 &#125; &#125; &#125; for(int i=1;i&lt;=n;i++)&#123; if(!color[i])&#123; //染色 paint(i,1); &#125; &#125;&#125;void work()&#123; if(flag==false)&#123; printf("0\n"); return ; &#125; stack&lt;int&gt; stack1,stack2; int now=1; for(int i=1;i&lt;=n;i++)&#123; if(color[i]==1)&#123; //入栈 stack1.push(t[i]); printf("a "); &#125; else &#123; stack2.push(t[i]); printf("c "); &#125; while((!stack1.empty() &amp;&amp; stack1.top()==now) || (!stack2.empty() &amp;&amp; stack2.top()==now))&#123; //判断是否弹出 if(!stack1.empty() &amp;&amp; stack1.top()==now)&#123; stack1.pop(); now++; printf("b "); &#125; else&#123; stack2.pop(); now++; printf("d "); &#125; &#125; &#125;&#125;int main()&#123; flag=1; scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++)&#123; scanf("%d",&amp;t[i]); &#125; make(); work(); return 0;&#125;]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>2008</tag>
+        <tag>提高组</tag>
+        <tag>二分图</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[NOIP2008题解报告]]></title>
+    <url>%2F2018%2F11%2F17%2FNOIP2008%E9%A2%98%E8%A7%A3%E6%8A%A5%E5%91%8A%2F</url>
+    <content type="text"><![CDATA[Oh !!!!!!T11234567891011121314151617181920212223242526272829303132333435363738#include&lt;cstdio&gt;#include&lt;cstdlib&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;iostream&gt;#include&lt;cctype&gt;using namespace std;int n,m,minn=19260817,maxx=-19260817;int num[27];char s[110];bool pd(int x)&#123; if(x==1 || x==0) return 0; for(int i=2;i&lt;=sqrt(x);i++) if(x%i==0) return 0; return 1;&#125;int main()&#123; cin&gt;&gt;s; for(int i=0;i&lt;strlen(s);i++)&#123; num[s[i]-'a'+1]++; &#125; for(int i=1;i&lt;=26;i++)&#123; if(num[i]!=0 &amp;&amp; num[i]&gt;maxx) maxx=num[i]; if(num[i]!=0 &amp;&amp; num[i]&lt;minn) minn=num[i]; &#125; if(pd(maxx-minn)) printf("Lucky Word\n%d\n",maxx-minn); else printf("No Answer\n0\n"); return 0;&#125; Oh !!!!!! T212345678910111213141516171819202122232425262728293031#include&lt;cstdio&gt;#include&lt;cstdlib&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;iostream&gt;#include&lt;cctype&gt;using namespace std;int k,m,n,sum;int a[10]=&#123;6,2,5,5,4,5,6,3,7,6&#125;;int work(int x)&#123; int num=0; while(x/10!=0)&#123; num+=a[x%10]; x/=10; &#125; return num+a[x];&#125;int main()&#123; scanf("%d",&amp;n); n=n-4; for(int i=0;i&lt;=1111;i++)&#123; for(int j=0;j&lt;=1111;j++)&#123; if(work(i)+work(j)+work(i+j)==n) sum++; &#125; &#125; printf("%d",sum); return 0;&#125;]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>历届真题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[NOIP2018提高组游记]]></title>
+    <url>%2F2018%2F11%2F11%2F2018%E6%B8%B8%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[不在爆零中爆发，就在爆零中灭亡。 ———鲁迅 其实根本说不上是游记，因为我就在省城，还是离考点最近的学校… Day0]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[在Linux上玩Minecraft]]></title>
+    <url>%2F2018%2F11%2F11%2Fmc%2F</url>
+    <content type="text"><![CDATA[Minecraft作为一款高自由度沙盒游戏，想必很多人在Windows上面玩得很开心，由于辣鸡网易收购了Minecraft，导致国服只能通过网易，然而我们Linux上也不是不可以玩，下面带你开启划水之旅。 Step 1.下载HMCL启动器这里，当然是选择Linux版本的啦！ Step 2.卸载系统自带Java(openJDK)执行命令1sudo apt-get remove openjdk* Step 3.下载Java 8(oracle-java8)这里，选择Linux x64 Step 4.安装Java 8(oracle-java8)接下来有点难度了。所有路径自己选，只不过要自己对应修改。*是你下载的java版本号。 在图中选择位置的下划线后面的数字。 1.解压缩并移动解压缩文件夹到桌面，cd到桌面，输入命令1sudo mv jre1.8.0_*/ /usr/local/ 2.配置环境变量输入命令1sudo gedit /etc/environment 在末尾复制以下内容123JAVA_HOME="/usr/local/jre1.8.0_*"CLASSPATH="$JAVA_HOME/lib"PATH＝"$JAVA_HOME/bin" 3.安装jre环境输入命令1sudo update-alternatives --install /usr/bin/java java /usr/local/jre1.8.0_*/bin/java 300 此时应该已经成功，输入命令检测1java -version 如果出现的是java而不是openJDK则说明安装成功！！跳过下一步。 4.选择正确jre输入命令1sudo update-alternatives --config java 按照提示选择你刚刚安装的Java。 Step 5.启动HMCL启动器cd到启动器目录，就是那个单文件，建议单独新建一个文件夹。输入命令1java -jar 再来一个tab自动补全(美滋滋)，反正就是那个带HMCL的文件。 然后。。。就没有然后了！！ 后记1.Java有两种，一种openjdk，一种oracle java，直接无法使用的原因应该是系统自带的是openjdk这种并不太普及的Java。 2.可以试试在不卸载自带Java的情况下安装Java 8，即跳过Step 2，也许就需要进行Step 4的第4部分。 3.运行过程中请不要关闭终端，如果嫌弃终端，请尝试以下命令1nohup java -jar HMCL-3.2.112.jar &amp; 也许你的文件名字不一样，请合理利用好tab自动补全。 4.成果展示]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>不务正业</tag>
+      </tags>
+  </entry>
+</search>
