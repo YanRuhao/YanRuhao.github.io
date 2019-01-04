@@ -336,7 +336,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.yrh-blog.xyz/2018/12/16/NOIP2008提高组——/">
+    <link itemprop="mainEntityOfPage" href="www.yrh-blog.xyz/2018/12/30/NOIP2008提高组——/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YRH">
@@ -355,7 +355,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/16/NOIP2008提高组——/" itemprop="url">a</a></h1>
+                <a class="post-title-link" href="/2018/12/30/NOIP2008提高组——/" itemprop="url">元旦欢乐%你赛解析</a></h1>
         
 
         <div class="post-meta">
@@ -367,8 +367,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-16T20:53:17+08:00">
-                2018-12-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-30T14:53:17+08:00">
+                2018-12-30
               </time>
             
 
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  1k
                 </span>
               
 
@@ -428,7 +428,55 @@
       
         
           
-            
+            <h4 id="T1-全民皆兵"><a href="#T1-全民皆兵" class="headerlink" title="T1 全民皆兵"></a>T1 全民皆兵</h4><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>  由于突如其来的外来入侵，地球防卫总部大大放宽了银河战队的选拔条件，现在紧急向全世界选拔银河战士来保卫地球。终于，从世界巡回海选中有n个人脱颖而出，每一个人都有一个较高的战斗值。地球防卫总部要求在最后选出来的人中任何两个人都必须是没有一点关系的（包括亲戚关系），这样才能保证在战场上每位战士都能心无杂念地奋勇杀敌。可恰恰不幸的是，在这n个人当中，有某一些人具有一些很遥远的亲戚关系，比如A的父亲的父亲的父亲的父亲（……）与B的母亲的母亲的母亲的母亲（……）是夫妻，那么就说A与B有亲戚关系。再说明白点，比如A和B有亲戚关系，B和C有亲戚关系，那么A和C就有亲戚关系（算法也太清晰了吧……）。而现在地球防卫总部急想在1秒钟的时间内知道这n个人能组成多大的军队以及在保证人数最大的情况下的军队的最大战斗力（指军队中每个战士的战斗值之和）是多少，所以就把这个任务叫给了号称“编程天才”的你来解决。  </p>
+<h5 id="输入说明"><a href="#输入说明" class="headerlink" title="输入说明"></a>输入说明</h5><p>第一行一个数n；（30%的数据n&lt;=10；100%的数据n&lt;=300000；）<br>第二行n个数，第i个数表示第i战士的战斗值；<br>接下来若干行(行数&lt;=n)，每行两个数Ai和Bi，表示Ai和Bi两位战士具有微妙的亲戚关系。<br>输入数据保证不出现Ai=Bi的情况，但一种情况多次出现是允许的，谁叫他们两太亲呢！<br>答案保证在longint范围内。  </p>
+<h5 id="输出说明"><a href="#输出说明" class="headerlink" title="输出说明"></a>输出说明</h5><p>共两行，每行一个数；<br>第一行为最大军队人数；<br>第二行为军队的最大战斗力。  </p>
+<h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">291</span> <span class="number">2306</span> <span class="number">668</span> <span class="number">2710</span> <span class="number">1524</span> <span class="number">1318</span> <span class="number">602</span> <span class="number">2991</span> <span class="number">2881</span> <span class="number">2951</span></span><br><span class="line"><span class="number">4</span> <span class="number">6</span></span><br><span class="line"><span class="number">9</span> <span class="number">4</span></span><br><span class="line"><span class="number">4</span> <span class="number">7</span></span><br><span class="line"><span class="number">9</span> <span class="number">1</span></span><br><span class="line"><span class="number">10</span> <span class="number">1</span></span><br><span class="line"><span class="number">7</span> <span class="number">10</span></span><br><span class="line"><span class="number">1</span> <span class="number">9</span></span><br></pre></td></tr></table></figure>
+<h5 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">10440</span></span><br></pre></td></tr></table></figure>
+<p>通讯线路</p>
+<p>问题描述：</p>
+<p>某地区共有n座村庄，每座村庄的坐标用一对整数(x, y)表示，现在要在村庄之间建立通讯网络。通讯工具有两种，分别是需要铺设的普通线路和卫星设备。卫星设备数量有限，只能给k个村庄配备卫星设备。拥有卫星设备的村庄互相间直接通讯；铺设了线路的村庄之间也可以通讯。卫星分配是不受限制的。</p>
+<p>问怎样合理的分配卫星和铺设线路，使得在保证每两座村庄之间都可以直接或间接地通讯的前提下，铺设线路的总长度最短。</p>
+<p>输入说明：</p>
+<p>第一行两个数：n，k（0≤k≤n≤2000）</p>
+<p>接下来n行，每行两个整数(x,y)数描述一个村庄。（-10000≤x,y≤10000）</p>
+<p>输出说明：</p>
+<p>仅一行，代表总长度，精确到0.0001</p>
+<p>样例输入：</p>
+<p>20 8</p>
+<p>137 824</p>
+<p>761 14</p>
+<p>68 151</p>
+<p>194 758</p>
+<p>149 138</p>
+<p>314 90</p>
+<p>809 404</p>
+<p>964 877</p>
+<p>471 66</p>
+<p>177 546</p>
+<p>73 977</p>
+<p>397 560</p>
+<p>928 653</p>
+<p>199 486</p>
+<p>736 44</p>
+<p>985 801</p>
+<p>621 509</p>
+<p>444 140</p>
+<p>88 508</p>
+<p>556 327</p>
+<p>样例输出：</p>
+<p>1355.4195</p>
+<p>墙壁粉刷</p>
+<p>问题描述：</p>
+<p>现在需要粉刷一列墙壁，墙壁被分成n段，为了节约用钱，科学家决定只粉刷其中一些段，同是为了美观，科学家要求每连续的m段墙壁中至少有两块被粉刷，现在已知粉刷每一段墙壁的费用。科学家要你帮他求出最少的费用。</p>
+<p>输入说明：</p>
+<p>第一行，n和m（2&lt;=n &lt;=10000，2&lt;=m&lt;=100）</p>
+<p>第二行，n个非负整数，第i个数为粉刷第ｉ段的费用。（费用&lt;=10000）</p>
+<p>输出说明：</p>
+<p>一行，最小费用。</p>
+<p>样例输入：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">8</span> <span class="number">3</span></span><br><span class="line"><span class="number">6</span> <span class="number">7</span> <span class="number">10</span> <span class="number">1</span> <span class="number">7</span> <span class="number">8</span> <span class="number">5</span> <span class="number">6</span></span><br></pre></td></tr></table></figure></p>
+<p>样例输出：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">30</span></span><br></pre></td></tr></table></figure></p>
+
           
         
       
@@ -1327,7 +1375,7 @@ show_date_time();
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="heartbeat">
     <i class="fa fa-heartbeat"></i>
   </span>
