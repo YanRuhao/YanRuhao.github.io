@@ -1884,7 +1884,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #622eff;
+  background: #a33df5;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3183,7 +3183,7 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("https://s1.ax1x.com/2018/11/18/FSdPh9.jpg") fixed center;
+  background: url("/images/background/2.jpg") fixed center;
   background-attachment: fixed;
   background-size: cover;
 }
