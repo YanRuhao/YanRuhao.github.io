@@ -113,7 +113,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="2018,最小生成树,并查集,">
 
 
 
@@ -127,18 +127,19 @@
 
 
 <meta name="description" content="戊戌年12月30日夜，大雪纷飞，当日，元旦模拟赛举行…… (编不下去了)">
+<meta name="keywords" content="2018,最小生成树,并查集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="元旦欢乐%你赛解析">
 <meta property="og:url" content="www.yrh-blog.xyz/2018/12/30/yun-dan-huan-le-sai/index.html">
 <meta property="og:site_name" content="YRH&#39;s Blog">
 <meta property="og:description" content="戊戌年12月30日夜，大雪纷飞，当日，元旦模拟赛举行…… (编不下去了)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/images/a.jpg">
-<meta property="og:updated_time" content="2019-01-06T12:30:13.173Z">
+<meta property="og:image" content="https://yrhphoto.oss-cn-hangzhou.aliyuncs.com/snow-earth.jpg">
+<meta property="og:updated_time" content="2019-02-28T13:53:54.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="元旦欢乐%你赛解析">
 <meta name="twitter:description" content="戊戌年12月30日夜，大雪纷飞，当日，元旦模拟赛举行…… (编不下去了)">
-<meta name="twitter:image" content="/images/a.jpg">
+<meta name="twitter:image" content="https://yrhphoto.oss-cn-hangzhou.aliyuncs.com/snow-earth.jpg">
 
 
 
@@ -381,6 +382,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -429,7 +452,7 @@
       
 
       
-        <p>戊戌年12月30日夜，大雪纷飞，当日，元旦模拟赛举行…… <del>(编不下去了)</del><br><img src="/images/a.jpg" alt="undefined" title="校园一角"><br><a id="more"></a>  </p>
+        <p>戊戌年12月30日夜，大雪纷飞，当日，元旦模拟赛举行…… <del>(编不下去了)</del><br><img src="https://yrhphoto.oss-cn-hangzhou.aliyuncs.com/snow-earth.jpg" alt="undefined" title="校园一角"><br><a id="more"></a>  </p>
 <h4 id="T1-全民皆兵"><a href="#T1-全民皆兵" class="headerlink" title="T1 全民皆兵"></a>T1 全民皆兵</h4><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>  由于突如其来的外来入侵，地球防卫总部大大放宽了银河战队的选拔条件，现在紧急向全世界选拔银河战士来保卫地球。终于，从世界巡回海选中有n个人脱颖而出，每一个人都有一个较高的战斗值。地球防卫总部要求在最后选出来的人中任何两个人都必须是没有一点关系的（包括亲戚关系），这样才能保证在战场上每位战士都能心无杂念地奋勇杀敌。可恰恰不幸的是，在这n个人当中，有某一些人具有一些很遥远的亲戚关系，比如A的父亲的父亲的父亲的父亲（……）与B的母亲的母亲的母亲的母亲（……）是夫妻，那么就说A与B有亲戚关系。再说明白点，比如A和B有亲戚关系，B和C有亲戚关系，那么A和C就有亲戚关系（算法也太清晰了吧……）。而现在地球防卫总部急想在1秒钟的时间内知道这n个人能组成多大的军队以及在保证人数最大的情况下的军队的最大战斗力（指军队中每个战士的战斗值之和）是多少，所以就把这个任务叫给了号称“编程天才”的你来解决。  </p>
 <h5 id="输入说明"><a href="#输入说明" class="headerlink" title="输入说明"></a>输入说明</h5><p>第一行一个数n；（30%的数据n&lt;=10；100%的数据n&lt;=300000；）<br>第二行n个数，第i个数表示第i战士的战斗值；<br>接下来若干行(行数&lt;=n)，每行两个数Ai和Bi，表示Ai和Bi两位战士具有微妙的亲戚关系。<br>输入数据保证不出现Ai=Bi的情况，但一种情况多次出现是允许的，谁叫他们两太亲呢！<br>答案保证在longint范围内。  </p>
 <h5 id="输出说明"><a href="#输出说明" class="headerlink" title="输出说明"></a>输出说明</h5><p>共两行，每行一个数；<br>第一行为最大军队人数；<br>第二行为军队的最大战斗力。  </p>
@@ -462,6 +485,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/2018/" rel="tag"># 2018</a>
+          
+            <a href="/tags/最小生成树/" rel="tag"># 最小生成树</a>
+          
+            <a href="/tags/并查集/" rel="tag"># 并查集</a>
+          
+        </div>
+      
 
       
       
@@ -471,7 +504,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/27/【题解】2008提高组——双栈队列/" rel="next" title="NOIP2008提高组——双栈队列">
+              <a href="/2018/11/27/TG2008-shuan-zhan-dui-lie/" rel="next" title="NOIP2008提高组——双栈队列">
                 <i class="fa fa-chevron-left"></i> NOIP2008提高组——双栈队列
               </a>
             
@@ -480,6 +513,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/13/zui-da-liu/" rel="prev" title="网络流————最大流问题">
+                网络流————最大流问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -560,7 +597,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -582,7 +619,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
