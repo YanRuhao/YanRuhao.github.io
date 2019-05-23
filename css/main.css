@@ -1884,7 +1884,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b8ffb6;
+  background: #d44dab;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3183,7 +3183,7 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("https://yrhphoto.oss-cn-hangzhou.aliyuncs.com/background.jpg") fixed center;
+  background: url("https://yrhphoto.oss-cn-hangzhou.aliyuncs.com/background%2003.jpg") fixed center;
   background-attachment: fixed;
   background-size: cover;
 }
