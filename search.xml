@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[zui-xiao-dian-dui]]></title>
+    <url>%2F2019%2F10%2F16%2Fzui-xiao-dian-dui%2F</url>
+    <content type="text"><![CDATA[给定序列 a[1],a[2],…,a[n]a[1], a[2], …, a[n]a[1],a[2],…,a[n] 函数 f(i,j)=(i−j)2+(a[i+1]+a[i+2]+…+a[j])2f(i, j) = (i - j)^2 + (a[i+1] + a[i+2] + … + a[j])^2f(i,j)=(i−j)2+(a[i+1]+a[i+2]+…+a[j])2 求 fff 的最小值 n≤100000n ≤ 100000n≤100000]]></content>
+      <categories>
+        <category>算法解析</category>
+      </categories>
+      <tags>
+        <tag>分治</tag>
+        <tag>最近点对</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于SPFA的优化]]></title>
+    <url>%2F2019%2F10%2F16%2FSPFA-SLF%2F</url>
+    <content type="text"><![CDATA[总所周知，关于SPFA，它死了。 但它是否真的一无是处？？ 或许我们还可以用一些玄学的算法拯救一下死去的SPFA。 啥是SPFA？ SPFASPFASPFA (Shortest(Shortest(Shortest PathPathPath FasterFasterFaster Algorithm)Algorithm)Algorithm) 是 BellmanBellmanBellman-FordFordFord 算法的一种队列实现，减少了不必要的冗余计算。 它可以在 O(kE)O(kE)O(kE) 的时间复杂度内求出源点到其他所有点的最短路径，可以处理负边。 然而正如我们所知，在NOI 2018的第一天第一题中，出题人卡了 SPFA 算法，导致 100 分变成 60 分，所以也就有了下图： 然而必要的时候这玩意处理负环还是很不错的，所以我们得来优化一下。 SPFA+SLF 什么是 SLFSLFSLF ？SLFSLFSLF 优化，即 SmallSmallSmall LabelLabelLabel FirstFirstFirst 策略，就是使用双端队列，把常规 SPFASPFASPFA 中的普通队列换成双端队列，然后每次插入时和队头比较，如果更优插到队头否则插队尾，这样时间可以优化很多。 TipTipTip : 队列为空时直接插入队尾。 #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;cstring&gt;#include &lt;cctype&gt;#include &lt;queue&gt;#include &lt;cmath&gt;using namespace std;const int inf = 2147483647;struct edge&#123; int next, to, dis;&#125;e[500005];int n, m, s, tot;int head[100010], vis[100010], dis[100010];deque &lt;int&gt; q;inline int read() &#123; int s = 0, f = 0; char ch = getchar(); while (!isdigit(ch)) f |= ch == '-', ch = getchar(); while (isdigit(ch)) s = (s &lt;&lt; 3) + (s &lt;&lt; 1) + (ch ^ 48), ch = getchar(); return f ? -s : s;&#125;void add(int x, int y, int z) &#123; e[++tot].next = head[x]; e[tot].to = y; e[tot].dis = z; head[x] = tot;&#125;void spfa(int s) &#123; for(int i = 1; i &lt;= n; i++) dis[i] = inf; dis[s] = 0, vis[s] = 1; q.push_back(s); while (!q.empty()) &#123; int u = q.front(); q.pop_front(); vis[u] = 0; for(int i = head[u]; i; i = e[i].next) &#123; int y = e[i].to; if(dis[y] &gt; dis[u] + e[i].dis) &#123; dis[y] = dis[u] + e[i].dis; if(!vis[y]) &#123; if (!q.empty() &amp;&amp; dis[y] &gt;= dis[q.front()]) q.push_back(y); else q.push_front(y); vis[y] = 1; &#125; &#125; &#125; &#125;&#125;int main() &#123; n = read(), m = read(), s = read(); for(int i = 1; i &lt;= m; i++) &#123; int x = read(), y = read(), z = read(); add(x, y, z); &#125; spfa(s); for(int i = 1; i &lt;= n; i++) printf("%d ", dis[i]); return 0;&#125;]]></content>
+      <categories>
+        <category>算法解析</category>
+      </categories>
+      <tags>
+        <tag>SPFA</tag>
+        <tag>最短路</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[BZOJ4381 OSU!]]></title>
+    <url>%2F2019%2F10%2F14%2Fbzoj-4318%2F</url>
+    <content type="text"><![CDATA[BZOJ4318BZOJ 4318BZOJ4318 OSU!OSU!OSU! （期望 DPDPDP ） Luogu1654Luogu1654Luogu1654 传送门 问题描述 给定一个长度为 𝑛𝑛n 的 010101 串，第 𝑖𝑖i 个位置为 111 的概率为 𝑝𝑖𝑝_𝑖pi​ ，一个极长的长度为 xxx 的子串会产生 x3x^3x3 的分数，求分数的期望。 输入描述 第一行有一个正整数 n(n≤105)n(n \le 10^5)n(n≤105) ，表示操作个数。接下去 nnn 行每行有一个 [0,1][0,1][0,1] 之间的实数，表示每个操作的成功率。 输出描述 一个实数，表示答案。答案四舍五入后保留 111 位小数。 输入样例 3 0.5 0.5 0.5 输出样例 6.0 样例说明 000000000 分数为 000，001001001 分数为 111 ，010010010 分数为 111 ，100100100 分数为 111 ，101101101 分数为 222 ，110110110 分数为 888 ，011011011 分数为 888 ，111111111 分数为 272727 ，总和为 484848 ，期望为 48÷8=6.048 \div 8=6.048÷8=6.0 题解 一道神奇的 DPDPDP 题目，难在转移方程的推理，码量很少。 对于 f(x)=x3f(x) = x^3f(x)=x3 ，有 f(x+1)=(x+1)3f(x+1) = (x + 1) ^ 3f(x+1)=(x+1)3，即: f(x+1) =(x+1)3=(x+1)(x+1)2=(x+1)(x2+2⋅x+1)=x3+2⋅x2+x+x2+2⋅x+1=x3+3⋅x3+3⋅x+1\begin{aligned} f(x + 1)\; &amp;=(x + 1) ^ 3 \\ &amp;=(x+ 1)(x+1)^2 \\ &amp;=(x+1)(x ^ 2 + 2 \cdot x + 1)\\ &amp;= x ^ 3 + 2 \cdot x ^ 2 + x + x ^ 2 + 2 \cdot x + 1 \\ &amp;= x ^ 3 + 3 \cdot x ^ 3 + 3 \cdot x + 1\\ \end{aligned} f(x+1)​=(x+1)3=(x+1)(x+1)2=(x+1)(x2+2⋅x+1)=x3+2⋅x2+x+x2+2⋅x+1=x3+3⋅x3+3⋅x+1​ 即 f(x+1)=f(x)+3⋅x3+3⋅x+1f(x + 1) = f(x) + 3 \cdot x^3 + 3 \cdot x + 1f(x+1)=f(x)+3⋅x3+3⋅x+1 。则我们维护这个增加值，用 f1[x]f1[x]f1[x] 表示 xxx 的期望，f2[x]f2[x]f2[x] 表示 x2x^2x2 的期望，不难得出 ： f1[i]=(f1[i−1]+1)∗p[i]f1[i] = (f1[i - 1] + 1) * p[i]f1[i]=(f1[i−1]+1)∗p[i] f2[i]=(f2[i−1]+2∗f1[i−1]+1)∗p[i]f2[i] = (f2[i - 1] + 2 * f1[i - 1] + 1) * p[i]f2[i]=(f2[i−1]+2∗f1[i−1]+1)∗p[i] 则，ans[i]=ans[i−1]+(3∗f2[i−1]+3∗f1[i−1]+1)∗p[i]ans[i] = ans[i - 1] + (3 * f2[i - 1] + 3 * f1[i - 1] + 1) * p[i]ans[i]=ans[i−1]+(3∗f2[i−1]+3∗f1[i−1]+1)∗p[i] ，则最终答案为 ans[n]ans[n]ans[n] 。 #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;cstring&gt;#include &lt;cctype&gt;#include &lt;cmath&gt;using namespace std;const int maxn = 1e5 + 10;int n;double ans, p[maxn];double f1[maxn], f2[maxn], f3[maxn];int main()&#123; scanf("%d", &amp;n); for (int i = 1; i &lt;= n; i++) scanf ("%lf", &amp;p[i]); for (int i = 1; i &lt;= n; i++) &#123; f1[i] = (f1[i - 1] + 1) * p[i]; f2[i] = (f2[i - 1] + 2 * f1[i - 1] + 1) * p[i]; f3[i] = (3 * f2[i - 1] + 3 * f1[i - 1] + 1) * p[i]; &#125; for (int i = 1; i &lt;= n; i++) ans += f3[i]; printf("%.1lf\n", ans); return 0;&#125;]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+        <tag>题解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[BZOJ3211 花神游历各国]]></title>
     <url>%2F2019%2F10%2F10%2Fbzoj-3211%2F</url>
     <content type="text"><![CDATA[BZOJ3211BZOJ 3211BZOJ3211 花神游历各国（树状数组+并查集） LuoguLuoguLuogu传送门 问题描述 给你一个序列，要求支持两种操作 把区间 [l,r][l,r][l,r] 内的所有数都开根（向下取整） 求区间 [l,r][l,r][l,r] 内所有数的和 输入描述 第一行一个整数 nnn，代表数列中数的个数。 第二行 nnn 个正整数，表示初始状态下数列中的数。 第三行一个整数 mmm，表示有 mmm 次操作。 接下来 mmm 行每行三个整数 k,l,rk,l,rk,l,r， k=0k=0k=0 表示给 [l,r][l,r][l,r] 中的每个数开平方(下取整) k=1k=1k=1 表示询问 [l,r][l,r][l,r] 中各个数的和。 数据中有可能 l&gt;rl&gt;rl&gt;r ，需要交换 lll 和 rrr。 输出描述 对于询问操作，每行输出一个回答。 输入样例 101 2 3 4 5 6 7 8 9 1050 1 101 1 101 1 50 5 81 4 8 输出样例 1976 数据范围 对于 30%30\%30% 的数据，1≤n,m≤10001\le n,m\le 10001≤n,m≤1000，数列中的数不超过 327673276732767。 对于 100%100\%100%的数据，1≤n,m≤1000001 \le n,m \le 1000001≤n,m≤100000, 1≤l,r≤1 \le l,r \le1≤l,r≤，数列中的数大于 000，且不超过 101210^{12}1012 题解 不喜欢敲线段树，刚好老师上课讲了该题的树状数组+并查集的解法，便自己动手捣鼓一下。 首先，单点修改求区间和可以用树状数组实现，因为开平方很耗时间，所以在这个方面可以优化，我们知道，开平方开几次之后数字就会等于 111 ，所以，用数组记录下一个应该开的数，每次直接跳到下一个不是1的数字进行开平方，至于这个数组，可以用并查集维护。 #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;cstring&gt;#include &lt;cctype&gt;#include &lt;cmath&gt;using namespace std;#define ll long longconst int maxn = 5e5 + 10;const int inf = 1e9 + 7;int n, m;ll a[maxn], b[maxn], f[maxn];inline ll read() &#123; ll s = 0, f = 0; char ch = getchar(); while (!isdigit(ch)) f |= ch == '-', ch = getchar(); while (isdigit(ch)) s = (s &lt;&lt; 3) + (s &lt;&lt; 1) + (ch ^ 48), ch = getchar(); return f ? -s : s;&#125;int find(int x) &#123; if (f[x] == x) return x; else return f[x] = find(f[x]);&#125;int lowbit (int x) &#123; return x &amp; -x;&#125;void add(int i, ll x) &#123; while (i &lt;= n) b[i] += x, i += lowbit(i);&#125; ll sum (int i) &#123; ll ans = 0; while (i &gt; 0) ans += b[i], i -= lowbit(i); return ans;&#125;int main() &#123; n = read(); for (int i = 1; i &lt;= n; i++) a[i] = read(), add(i, a[i]); for (int i = 1; i &lt;= n; i++) f[i] = i; m = read(); for (int i = 1; i &lt;= m; i++) &#123; ll k = read(), l = read(), r = read(); if (l &gt; r) swap(l, r); if(k == 0) &#123; while (l &lt;= r) &#123; ll t = sqrt(a[l]); add(l, t - a[l]); a[l] = t; if (a[l] &lt;= 1) f[l] = l + 1; else f[l] = l; if (f[l] == l) l++; else l = find(f[l]); &#125; &#125; else if(k == 1) printf("%lld\n", sum(r) - sum(l - 1)); &#125; return 0; &#125;]]></content>
@@ -68,8 +104,8 @@
         <category>算法解析</category>
       </categories>
       <tags>
-        <tag>最短路</tag>
         <tag>SPFA</tag>
+        <tag>最短路</tag>
         <tag>Dijkstra</tag>
       </tags>
   </entry>
