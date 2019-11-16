@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CSP2019 格雷码]]></title>
+    <url>%2F2019%2F11%2F16%2FCSP2019-D1-T1%2F</url>
+    <content type="text"><![CDATA[CSP2019 Day1CSP 2019\, Day1CSP2019Day1 退役祭 十年OIOIOI一场空， 不开long longlong \,longlonglong见祖宗。 本觉long longlong\,longlonglong已经够， unsigned long longunsigned\,long\, longunsignedlonglong忘脑后。 以上今日真实写照= =// 我是真的不知道T1我考场写了个啥子玩意，在想些啥子东西，反正当我看见 ≤263−1\le 2^{63}-1≤263−1 和 2642^{64}264 的时候竟然认为是同一个东西？？？然后顺理成章的忘记了unsigned long longunsigned\, long\, longunsignedlonglong 95pts95pts95pts 滚粗(ノ｀Д)ノ 然后回到该题就是一个类似二分(?)的思路吧，转换题目，以此与 2i2^i2i 相比较，判断为 000 还是 111，同时记录该段区间内的顺序（正序或逆序）即可。 举个栗子 n=3,k=5n=3,k=5n=3,k=5 时，将 kkk 与 2i2^i2i 进行比较，若大于则为右半区间，则其顺序为逆序，标记即可，以此类推即可，详见代码实现，可读性应该还行 QwQQwQQwQ，由于太弱，代码较长看看就好 以下是代码： #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;cstring&gt;#include &lt;cctype&gt;using namespace std;#define ull unsigned long longconst int mod = 1e9 + 7;1const int maxn = 1e6 + 10;int n, m, flag;ull k;int main() &#123; scanf("%d%llu", &amp;n, &amp;k); for (int i = n - 1; i &gt;= 0; i--) &#123; ull p = 1ull &lt;&lt; i; if (k &gt;= p) &#123; if (flag == 1) printf("0"); else printf("1"); flag = 1; &#125; else &#123; if (flag == 0) printf("0"); else printf("1"); flag = 0; &#125; if (k &gt;= p) k -= p; &#125; return 0;&#125; 顺便放一个考场 95pts95pts95pts 的辣鸡代码，细节啥的别在意，太弱了： #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;cstring&gt;#include &lt;cctype&gt;using namespace std;#define int long longconst int mod = 1e9 + 7;const int maxn = 1e6 + 10;int n, m, k, flag, ans;int p[100];inline int read() &#123; int s = 0, f = 0; char ch = getchar(); while (!isdigit(ch)) f |= ch == '-', ch = getchar(); while (isdigit(ch)) s = (s &lt;&lt; 3) + (s &lt;&lt; 1) + (ch ^ 48), ch = getchar(); return f ? -s : s;&#125;signed main() &#123; freopen ("code.in", "r", stdin); freopen ("code.out", "w", stdout); n = read(), k = read(); p[0] = 1; for (int i = 1; i &lt;= n; i++) p[i] = p[i - 1] * 2; if (k &gt;= p[n - 1]) printf("1"), flag = 1; else printf("0"), flag = 0; if (k - p[n - 1] &gt;= 0) k -= p[n - 1]; for (int i = n - 2; i &gt;= 0; i--) &#123; if (k &gt;= p[i]) &#123; if (flag == 1) printf("0"); else printf("1"); flag = 1; &#125; else &#123; if (flag == 0) printf("0"); else printf("1"); flag = 0; &#125; if (k - p[i] &gt;= 0) k -= p[i]; &#125; return 0;&#125;]]></content>
+      <categories>
+        <category>算法解析</category>
+      </categories>
+      <tags>
+        <tag>模拟</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CF429D Tricky Function]]></title>
     <url>%2F2019%2F10%2F16%2FCF429D%2F</url>
     <content type="text"><![CDATA[CF429D Tricky Function LG 传送门 问题描述 给定序列 a[1],a[2],…,a[n]a[1], a[2], …, a[n]a[1],a[2],…,a[n] 函数 f(i,j)=(i−j)2+(a[i+1]+a[i+2]+…+a[j])2f(i, j) = (i - j)^2 + (a[i+1] + a[i+2] + … + a[j])^2f(i,j)=(i−j)2+(a[i+1]+a[i+2]+…+a[j])2 求 fff 的最小值 输入样例 #111 41 0 0 -1 #222 21 -1 输出样例 #111 1 #222 2 数据范围 n≤100000,−10000≤a[i]≤10000n ≤ 100000, -10000 \le a[i] \le 10000n≤100000,−10000≤a[i]≤10000 题解 对题目稍作转化： 用 sum[i]sum[i]sum[i] 来表示前缀和 f(i,j)=(j−i)2+(sum[j]−sum[i])2f(i,j)=(j-i)^2+(sum[j]-sum[i])^2f(i,j)=(j−i)2+(sum[j]−sum[i])2 如果把 (i,sum[i])(i,sum[i])(i,sum[i]) 看作第 i 个点，f(i,j)f(i,j)f(i,j)就是 i,ji,ji,j 两点的距离的平方。 问题变成了平面上的 nnn 个点，求最近点对。 #include &lt;cstdio&gt;#include &lt;cstdlib&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;cmath&gt;#include &lt;cstring&gt;#include &lt;cctype&gt;using namespace std;#define int long longconst int maxn = 1e5 + 10;const int inf = 1e9;int n, m;struct node &#123; int x, y;&#125;v[maxn], temp[maxn];inline int read() &#123; int s = 0, f = 0; char ch = getchar(); while (!isdigit(ch)) f |= ch == '-', ch = getchar(); while (isdigit(ch)) s = (s &lt;&lt; 3) + (s &lt;&lt; 1) + (ch ^ 48), ch = getchar(); return f ? -s: s;&#125;bool cmpx (node a, node b) &#123; return a.x &lt; b.x;&#125;bool cmpy (node a, node b) &#123; return a.y &lt; b.y;&#125;int dis(node a,node b) &#123; return pow(a.x - b.x, 2) + pow(a.y - b.y, 2);&#125;int calc(int l, int r) &#123; if (l == r) return inf; if (l + 1 == r) return dis(v[l], v[r]); int mid = (l + r) &gt;&gt; 1; int d = min(calc(l, mid), calc(mid + 1, r)); int k = 0; for (int i = l; i &lt;= r; i++) if (pow(v[mid].x - v[i].x, 2) &lt; d) temp[++k] = v[i]; sort(temp + 1, temp + k + 1, cmpy); for (int i = 1; i &lt;= k; i++) for (int j = i + 1; j &lt;= k; j++) &#123; if (pow(temp[i].y - temp[j].y, 2) &gt;= d) break; d = min(d, dis(temp[i], temp[j])); &#125; return d;&#125;signed main() &#123; n = read(); for (int i = 1; i &lt;= n; i++) &#123; int a = read(); v[i].x = i, v[i].y += v[i - 1].y + a; &#125; sort(v + 1, v + n + 1, cmpx); printf("%lld\n", calc(1, n)); return 0;&#125;]]></content>
@@ -32,8 +43,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>动态规划</tag>
         <tag>题解</tag>
+        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
